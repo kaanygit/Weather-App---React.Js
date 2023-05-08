@@ -1,7 +1,8 @@
 import {useContext, useRef, useState } from 'react'
 import './wheather.style.css'
 import { DataContext } from '../context/data.context'
- 
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const WheatherInput=()=>{
     const inputRef=useRef();
@@ -9,9 +10,8 @@ const WheatherInput=()=>{
     const dataContext = useContext(DataContext);
 
 
-
     const handleInputValue=()=>{
-        const value=inputRef.current.value;
+        const value= inputRef.current.value;
         setInputValue(value);
         console.log('butona tıkladın');
     };
